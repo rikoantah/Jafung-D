@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jabatan Fungsional</title>
+
+<style>
+:root{
+  --blue:#2563eb;
+  --sky:#0ea5e9;
+  --green:#16a34a;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e5e7eb;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+.header{
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  color:#fff;
+  padding:26px 18px 20px;
+  text-align:center;
+}
+
+.header h1{
+  margin:0;
+  font-size:1.7rem;
+  font-weight:800;
+}
+
+.header p{
+  margin-top:6px;
+  font-size:13px;
+  opacity:.9;
+}
+
+/* MAIN */
+.main{
+  max-width:720px;
+  margin:auto;
+  padding:18px;
+}
+
+/* ACTION BUTTONS */
+.actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-bottom:22px;
+}
+
+.action-btn{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:var(--card);
+  border-radius:18px;
+  padding:18px;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:var(--shadow);
+  transition:.2s ease;
+}
+
+.action-btn:hover{
+  transform:translateY(-2px);
+}
+
+.icon{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  color:#fff;
+  flex-shrink:0;
+}
+
+.i-blue{background:linear-gradient(135deg,#60a5fa,#2563eb)}
+.i-green{background:linear-gradient(135deg,#4ade80,#16a34a)}
+.i-sky{background:linear-gradient(135deg,#7dd3fc,#0ea5e9)}
+
+.action-text{
+  font-size:16px;
+  font-weight:800;
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:15px;
+  font-weight:800;
+  margin:10px 0 12px;
+  color:var(--blue);
+}
+
+/* ACCORDION */
+.card{
+  background:var(--card);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+
+details{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px 14px;
+  margin-bottom:12px;
+}
+
+details[open]{
+  background:#f0f9ff;
+  border-color:#bae6fd;
+}
+
+summary{
+  list-style:none;
+  cursor:pointer;
+  font-weight:800;
+  font-size:15px;
+  position:relative;
+  padding-right:24px;
+}
+
+summary::after{
+  content:"+";
+  position:absolute;
+  right:0;
+  top:0;
+  font-size:20px;
+  font-weight:900;
+  color:var(--blue);
+}
+
+details[open] summary::after{
+  content:"–";
+}
+
+.content{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.content ul{
+  padding-left:18px;
+}
+
+.content li{
+  margin-bottom:6px;
+  line-height:1.5;
+}
+
+/* FOOTER NOTE */
+.note{
+  margin-top:16px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* PRINT */
+@media print{
+  body{background:#fff}
+  .header{background:#fff;color:#000}
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Jabatan Fungsional</h1>
+  <p>Layanan & Informasi Pengurusan JF</p>
+</div>
+
+<div class="main">
+
+  <!-- TOMBOL UTAMA -->
+  <div class="actions">
+
+    <a class="action-btn" target="_blank"
+       href="https://script.google.com/macros/s/AKfycbwKpS5fh-4wi4xHqdv79_7FzZ3f4o4FkqHmI-pZGVpB1bwOshKicdJWZRyhow9ZizqO/exec">
+      <div class="icon i-green">📝</div>
+      <div class="action-text">Daftar Verifikasi JAFUNG</div>
+    </a>
+
+    <a class="action-btn" target="_blank"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSdw_h__lTohZpKJ39w8N5WVtfdNqzT57A72WmaBQvv1gtVTbA/viewform">
+      <div class="icon i-sky">🔗</div>
+      <div class="action-text">Link JAFUNG BKD</div>
+    </a>
+
+  </div>
+
+  <!-- INFORMASI -->
+  <div class="section-title">Persyaratan & Checklist</div>
+
+  <div class="card">
+
+    <details open>
+      <summary>Usul Pengangkatan JF</summary>
+      <div class="content">
+        <ul>
+          <li>SK Jabatan Terakhir</li>
+          <li>SK Pangkat Terakhir</li>
+          <li>STR Copy Warna</li>
+          <li>Sertifikat UKOM</li>
+          <li>Anjab & Peta Jabatan</li>
+          <li>Persetujuan Menpan</li>
+          <li>SKP 2 Tahun</li>
+          <li>Ijazah & Transkrip</li>
+          <li>PAK Pengangkatan</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Pengangkatan Kembali</summary>
+      <div class="content">
+        <ul>
+          <li>SK Pemberhentian JF</li>
+          <li>SK Pangkat Terakhir</li>
+          <li>STR</li>
+          <li>Sertifikat UKOM</li>
+          <li>PAK Integrasi / Konversi</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Kenaikan Jenjang</summary>
+      <div class="content">
+        <ul>
+          <li>SK Jabatan Saat Ini</li>
+          <li>SK Pangkat Terakhir</li>
+          <li>STR</li>
+          <li>Sertifikat UKOM</li>
+          <li>SKP 1 Tahun</li>
+          <li>Seluruh PAK</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Pemberhentian</summary>
+      <div class="content">
+        <ul>
+          <li>SK Jabatan Fungsional</li>
+          <li>SK Pangkat Terakhir</li>
+          <li>Surat Pengunduran Diri / Mutasi</li>
+          <li>PAK Terakhir</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="note">
+    Pastikan seluruh berkas telah disiapkan sebelum melakukan pengajuan.
+  </div>
+
+</div>
+
+</body>
+</html>
